@@ -1,9 +1,18 @@
 ## Calculation Results
 
-Matrix:
-[[0. 1. 0. 1.]
- [0. 0. 1. 1.]
- [0. 1. 0. 0.]]
+### $m = 2$, $n = 4$
+
+$$ [\bold{0},\ A_{n-1}^1] = 
+\left[\begin{matrix}
+    0 & 1 & 0 & 1 \\
+    0 & 0 & 1 & 1 \\
+    0 & 1 & 0 & 0
+\end{matrix}\right]
+$$
+
+Column $i$ of the matrix $[\bold{0},\ A_{n-1}^1]$ is the coordinate of point $i$, where point $0$ is the origin and points $1$ to $n-1$ are the rest $n-1$ points of the Alon-Vu simplex.
+
+The following table shows the results of the distance between set $S$ and set $T$, where $(S, T)$ is a partition of the $n$ points.
 
 | S | T | Distance |
 |---|---|----------|
@@ -15,17 +24,92 @@ Matrix:
 | 0,2 | 1,3 | 1.0000000001199927 |
 | 0,3 | 1,2 | 0.4082482904725163 |
 
-The minimum distance is 0.4082482904725163 for partitions S=(0, 3) and T=(1, 2)
+The minimum distance is $0.4082482904725163$ for partitions $S=(0, 3)$ and $T=(1, 2)$.
 
 
-Matrix:
-[[0. 1. 0. 0. 1. 1. 0. 1.]
- [0. 0. 1. 0. 0. 1. 1. 1.]
- [0. 0. 0. 1. 1. 0. 1. 1.]
- [0. 1. 0. 0. 0. 1. 0. 0.]
- [0. 0. 1. 0. 1. 0. 1. 1.]
- [0. 0. 0. 1. 1. 1. 0. 1.]
- [0. 1. 0. 0. 0. 0. 1. 1.]]
+### $m = 3$, $n = 8$
+
+$$ [\bold{0},\ A_{n-1}^1] = 
+\left[\begin{matrix}
+    0 & 1 & 0 & 0 & 1 & 1 & 0 & 1 \\
+    0 & 0 & 1 & 0 & 0 & 1 & 1 & 1 \\
+    0 & 0 & 0 & 1 & 1 & 0 & 1 & 1 \\
+    0 & 1 & 0 & 0 & 0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 1 & 0 & 1 & 1 \\
+    0 & 0 & 0 & 1 & 1 & 1 & 0 & 1 \\
+    0 & 1 & 0 & 0 & 0 & 0 & 1 & 1
+\end{matrix}\right]
+$$
+
+The minimum distance is $0.08737045413294035$ for partitions $S=(0, 4, 5, 6)$ and $T=(1, 2, 3, 7)$.
+
+
+### $m = 4$, $n = 16$
+
+$$ [\bold{0},\ A_{n-1}^1] = 
+\left[\begin{matrix}
+    0 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 1 \\
+    0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 1 & 1 & 1 & 1 \\
+    0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 1 & 1 \\
+    0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 1 \\
+    0 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 1 & 1 & 1 \\
+    0 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 \\
+    0 & 0 & 0 & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 1 & 1 & 0 & 1 \\
+    0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 1 \\
+    0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 & 1 & 1 \\
+    0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1 \\
+    0 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 1 & 1 & 0 \\
+    0 & 0 & 0 & 0 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 1 & 0 & 1 & 1 & 0 \\
+    0 & 0 & 0 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 0 \\
+    0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0
+\end{matrix}\right]
+$$
+
+
+The minimum distance is $3.7168436971573464 \times 10^{-4}$ for partitions $S=(0, 5, 6, 7, 8, 9, 10, 15)$ and $T=(1, 2, 3, 4, 11, 12, 13, 14)$.
+
+
+## Findings and Conjecture
+
+Based on current calculation results, I make the following conjectures:
+1. The minimum distance always achieves when $|S| = |T| = \dfrac{n}{2}$.
+2. We examine the coefficients of the m-th binomial expansion $(x+y)^m$, the $i$-th coefficient is $\dbinom{m}{i}$ and $\sum_{i=0}^m \dbinom{m}{i} = n$. Set $S$ contains the points when $i$ is even and set $T$ contains the points when $i$ is odd.
+
+For example, when $m = 2$, $n = 1 + 2 + 1$, then $S$ contains points $\{0\} \cup \{3\}$, while $T$ contains points $\{1\} \cup \{2\}$.
+
+When $m = 3$, $n = 1 + 3 + 3 + 1$, then $S$ contains points $\{0\} \cup [4, 6]$, while $T$ contains points $[1, 3] \cup \{7\}$.
+
+When $m = 4$, $n = 1 + 4 + 6 + 4 + 1$, $S$ contains points $\{0\} \cup [5, 10] \cup \{15\}$, while $T$ contains points $[1, 4] \cup [11, 14]$.
+
+Therefore I conjecture,
+
+When $m = 5$, $n = 1 + 5 + 10 + 10 + 5 + 1$, $S$ contains points $\{0\} \cup [6, 15] \cup [26, 30]$, while $T$ contains points $[1, 5] \cup [16, 25] \cup \{31\}$.
+
+When $m = 6$, $n = 1 + 6 + 15 + 20 + 15 + 6 + 1$, $S$ contains point $\{0\} \cup [7, 21] \cup [42, 56] \cup \{63\}$, while $T$ contains points $[1, 6] \cup [22, 41] \cup [57, 62]$.
+
+
+## Verification of $m=5$ to $m=8$
+
+For $m=5$, it's infeasible to calculate all $2^{31} - 1$ possible combinations of $(S, T)$. So I first assume that the conjecture 1 is true. Now we have $\dbinom{31}{15}$ possible combinations of $(S, T)$. However, $\dbinom{31}{15}$ cases are still too many to calculate, so I only calculate those $(S, T)$ where $S$ and $T$ are symmetric to each other, i.e., for any point $i \in S$, we have $(31 - i) \in T$, and $|S| = |T| = |16|$, $\bold{0} \in S$. By this, I calculate $2^{15}$ combinations of $(S, T)$.
+
+Within these $2^{15}$ combinations of $(S, T)$,
+
+The minimum distance is $2.605266759925193\times 10^{-5}$ for partitions $S=(0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 26, 27, 28, 29, 30) = \{0\} \cup [6, 15] \cup [26, 30]$ and $T=(1, 2, 3, 4, 5, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 31) = [1, 5] \cup [16, 25] \cup \{31\}$, which is exactly the same as my conjecture.
+
+For $m = 6, 7, 8$, due to the large search space, I just directly calculate the distance when $S$ and $T$ satisfy my conjecture. 
+
+For $m=6$,  $S = \{0\} \cup [7, 21] \cup [42, 56] \cup \{63\}$, $T = [0, 63] - S$, $\mathrm{Distance} = 7.369502575757949 \times 10^{-4}$.
+
+For $m=7$, $S = \{0\} + [8, 29] + [64, 99] + [120, 127]$, $T = [0, 127] - S$, $\mathrm{Distance} = 6.378983066158074 \times 10^{-4}$.
+
+For $m=8$, $S = \{0\} + [9, 37] + [93, 163] + [219, 247] + \{255\}$, $T = [0, 255] - S$, $\mathrm{Distance} =3.953879426837249 \times 10^{-4}$
+
+The distances when $m=6,7,8$ are larger than the distance when $m=5$, and are all of the same order of magnitude as the distance when $m=4$. So maybe these are not the smallest distances when $m=6,7,8$. But my conjecture does give approximate solutions, determining $S$ and $T$ immediately with the distances smaller than $1 \times 10^{-3}$. 
+
+## Appendix
+
+Results for $m = 3$, $n = 8$:
 
 | S | T | Distance |
 |---|---|----------|
@@ -157,24 +241,4 @@ Matrix:
 | 0,4,6,7 | 1,2,3,5 | 0.27735025597654395 |
 | 0,5,6,7 | 1,2,3,4 | 0.16495725131245473 |
 
-The minimum distance is 0.08737045413294035 for partitions S=(0, 4, 5, 6) and T=(1, 2, 3, 7)
 
-
-Matrix:
-[[0. 1. 0. 0. 0. 1. 1. 1. 0. 0. 0. 1. 1. 1. 0. 1.]
- [0. 0. 1. 0. 0. 0. 0. 1. 1. 1. 0. 0. 1. 1. 1. 1.]
- [0. 0. 0. 1. 0. 0. 1. 0. 0. 1. 1. 1. 1. 0. 1. 1.]
- [0. 0. 0. 0. 1. 1. 0. 0. 1. 0. 1. 1. 0. 1. 1. 1.]
- [0. 1. 0. 0. 0. 0. 1. 1. 0. 0. 0. 0. 1. 0. 0. 0.]
- [0. 0. 0. 1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 1. 1.]
- [0. 0. 1. 0. 0. 0. 1. 0. 1. 1. 0. 1. 1. 0. 1. 1.]
- [0. 0. 0. 0. 1. 1. 0. 1. 0. 0. 1. 1. 1. 1. 0. 1.]
- [0. 0. 0. 1. 0. 0. 1. 0. 1. 0. 1. 1. 0. 1. 1. 1.]
- [0. 0. 0. 0. 1. 1. 0. 0. 1. 1. 0. 0. 1. 1. 1. 1.]
- [0. 1. 0. 0. 0. 0. 0. 1. 0. 0. 1. 1. 0. 0. 1. 1.]
- [0. 0. 1. 0. 0. 1. 1. 0. 1. 0. 1. 0. 1. 1. 1. 0.]
- [0. 0. 0. 0. 1. 0. 1. 1. 0. 1. 1. 1. 0. 1. 1. 0.]
- [0. 0. 0. 1. 0. 1. 1. 1. 1. 0. 0. 1. 1. 0. 1. 0.]
- [0. 1. 0. 0. 0. 0. 0. 0. 1. 1. 1. 1. 1. 1. 0. 0.]]
-
-The minimum distance is 0.00037168436971573464 for partitions S=(0, 5, 6, 7, 8, 9, 10, 15) and T=(1, 2, 3, 4, 11, 12, 13, 14)
